@@ -1,11 +1,10 @@
 import React from 'react';
-import './TutorialsCrud.scss';
 
-class TutorialsCrud extends React.Component {
+class Chart extends React.Component {
   render() {
     return (
-      <div className="TutorialsCrud border border-sucsess m-2">
-        <h2>TutorialsCrud</h2>
+      <div className="flex-fill border border-secondary m-2">
+        <h2>Chart Goes here</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
@@ -15,4 +14,4 @@ class TutorialsCrud extends React.Component {
   }
 }
 
-export default TutorialsCrud;
+export default Chart;

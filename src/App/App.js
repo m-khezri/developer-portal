@@ -4,6 +4,7 @@ import Auth from '../components/Auth/Auth';
 import './App.scss';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
+import Chart from '../components/chart/chart';
 import Tutorials from '../components/Tutorials/Tutorials';
 import CommitsData from '../components/CommitsData/CommitsData';
 import TutorialsCrud from '../components/TutorialsCrud/TutorialsCrud';
@@ -56,10 +57,13 @@ class App extends Component {
     return (
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
-        <Tutorials />
-        <Profile />
-        <CommitsData />
-        <TutorialsCrud />
+        <div className="main-container bg-light rounded d-flex">
+          <Tutorials />
+          <Profile />
+          <CommitsData />
+          <TutorialsCrud />
+          <Chart />
+        </div>
       </div>
     );
   }
