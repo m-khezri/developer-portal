@@ -5,9 +5,8 @@ import './App.scss';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
 import Chart from '../components/chart/chart';
-import Tutorials from '../components/Tutorials/Tutorials';
-import CommitsData from '../components/CommitsData/CommitsData';
-import TutorialsCrud from '../components/TutorialsCrud/TutorialsCrud';
+import Input from '../components/Input/Input';
+import Output from '../components/Output/Output';
 import authRequest from '../helpers/data/authRequest';
 import firebase from 'firebase/app';
 
@@ -57,12 +56,18 @@ class App extends Component {
     return (
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
-        <div className="main-container bg-light rounded d-flex">
-          <Tutorials />
-          <Profile />
-          <CommitsData />
-          <TutorialsCrud />
-          <Chart />
+        <div className="container rounded">
+          <div className="row">
+            <Profile />
+            <div className="col-sm-9">
+              <Input />
+              <Output />
+            </div>
+
+          </div>
+          <div className="row my-3">
+            <Chart />
+          </div>
         </div>
       </div>
     );
