@@ -1,6 +1,5 @@
 import React from 'react';
 import './Input.scss';
-import { FormGroup, Label, Input } from 'reactstrap';
 
 class Inputs extends React.Component {
   render() {
