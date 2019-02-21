@@ -43,7 +43,7 @@ class Inputs extends React.Component {
         </div>
 
         <div className="flex-item mt-4 ml-3">
-          <a href="#" class="btn btn-default btn-circle">+</a>
+          <a href="www.google.com" class="btn btn-default btn-circle">+</a>
         </div>
       </div>
     );
