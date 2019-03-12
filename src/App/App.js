@@ -13,6 +13,8 @@ import firebase from 'firebase/app';
 class App extends Component {
   state = {
     authed: false,
+    profile: '',
+    avatar: '',
   }
 
   componentDidMount() {
@@ -58,7 +60,7 @@ class App extends Component {
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
         <div className="container rounded">
           <div className="row">
-            <Profile />
+            <Profile profile='Mohammad' avatar='avatar' />
             <div className="col-sm-9">
               <Input />
               <Output />

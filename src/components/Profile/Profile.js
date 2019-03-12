@@ -1,17 +1,14 @@
 import React from 'react';
-import './Profile.scss';
 
 class Profile extends React.Component {
   render() {
-
     return (
-      <div className="profile col">
-        <h2>Profile</h2>
-
+      <div>
+        <h1>{this.props.profile}</h1>
       </div>
     );
   }
-}
-
+};
 
 export default Profile;
+
