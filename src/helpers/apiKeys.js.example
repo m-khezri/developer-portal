@@ -7,6 +7,9 @@ const apiKeys = {
     storageBucket: '',
     messagingSenderId: '',
   },
+    "githubApi": {
+    "client_id": "Iv1.729580f387e90d8e",
+    "client_secret": "1bf33ce4e85e7eb807685ee968759fd9a2d05050"
+    }
+}
 };
-
-export default apiKeys;
