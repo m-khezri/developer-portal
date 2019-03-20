@@ -20,21 +20,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getUser(this.state.gitHubUserName)
-      .then((result) => {
-        console.log(result);
-        this.setState({ profile: result });
-      })
-      .catch(err => console.log(err));
-
-    getCommits(this.state.gitHubUserName)
-      .then((result) => {
-        console.log(result);
-        this.setState({ commits: result });
-      })
-      .catch(err => console.error(err));
-
     connection();
+
+    const gitHubUserInfo = (userName) => {
+      getUser.getUserInfo(userName).then((results) => {
+        this.setState({ gitHubProfile: results });
+      })
+        .catch(err => console.error('error in githubuser', err));
+    };
+
+    const gitHubUserCommits = (userName) => {
+      getCommits.getCommits(userName).then((result) => {
+        this.setState({ gitHubCommits: result });
+      })
+        .catch(err => console.error(err));
+    };
+
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
