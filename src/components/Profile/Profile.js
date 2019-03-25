@@ -7,7 +7,6 @@ class Profile extends React.Component {
         <h4 className="text-center">{this.props.profile.name}</h4>
         <p className="text-center">{this.props.profile.bio}</p>
         <img className="w-75 rounded-circle mx-auto d-block" src={this.props.profile.avatar_url} alt="user profile" />
-
       </div>
     );
   }

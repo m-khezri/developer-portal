@@ -3,7 +3,6 @@ import connection from '../helpers/data/connection';
 import Auth from '../components/Auth/Auth';
 import './App.scss';
 import getUser from '../helpers/data/GithubRequests';
-import getCommits from '../helpers/data/GithubRequests';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
 import Chart from '../components/chart/chart';
@@ -15,27 +14,16 @@ import firebase from 'firebase/app';
 class App extends Component {
   state = {
     profile: {},
-    gitHubUserName: '',
-    commits: 0,
   }
 
   componentDidMount() {
+    getUser('m-khezri')
+      .then((result) => {
+        this.setState({ profile: result });
+      })
+      .catch(err => console.log(err));
+
     connection();
-
-    const gitHubUserInfo = (userName) => {
-      getUser.getUserInfo(userName).then((results) => {
-        this.setState({ gitHubProfile: results });
-      })
-        .catch(err => console.error('error in githubuser', err));
-    };
-
-    const gitHubUserCommits = (userName) => {
-      getCommits.getCommits(userName).then((result) => {
-        this.setState({ gitHubCommits: result });
-      })
-        .catch(err => console.error(err));
-    };
-
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
@@ -48,7 +36,6 @@ class App extends Component {
       }
     });
   }
-
   componentWillUnmount() {
     this.removeListener();
   }
@@ -79,7 +66,6 @@ class App extends Component {
           <div className="row">
             <Profile
               profile={this.state.profile}
-              commits={this.state.commits}
             />
             <div className="col-sm-9">
               <Input />
