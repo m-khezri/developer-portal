@@ -22,16 +22,12 @@ class Output extends React.Component {
 
         <div class="tab-content">
           <div className="tab-pane container active" id="Toturials-tab">
-            , ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
           </div>
           <div className="tab-pane container fade" id="Blog-tab">
-            Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
           </div>
           <div className="tab-pane container fade" id="Resources-tab">
-            Sipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
           </div>
           <div className="tab-pane container fade" id="Podcast-tab">
-            Delectus eum cum harum, iure minus excepturi id iusto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto, ipsa praesentium omnis quisquam necessitatibus culpa consequuntur reprehenderit consequatur voluptatibus vero delectus eum cum harum, iure minus excepturi id iusto.
           </div>
         </div>
 
