@@ -8,7 +8,6 @@ import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
 import Chart from '../components/chart/chart';
 import Input from '../components/Input/Input';
-import Output from '../components/Output/Output';
 import authRequest from '../helpers/data/authRequest';
 import firebase from 'firebase/app';
 
@@ -79,7 +78,6 @@ class App extends Component {
             />
             <div className="col-sm-9">
               <Input />
-              <Output />
             </div>
           </div>
           <div className="row my-3">

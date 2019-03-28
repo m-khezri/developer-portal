@@ -1,16 +1,34 @@
 import React from 'react';
 import './Input.scss';
+import Output from '../Output/Output';
 
 class Inputs extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange (e) {
+    this.setState({value: e.target.value});
+  }
+
+  handleSubmit () {
+    alert('Your input is  ' + this.state.value);
+  }
+
+
   render() {
     return (
+      <form onSubmit={this.handleSubmit}>
       <div className="Input bg-white rounded shadow-sm p-3 d-flex">
         <div className="w-75 flex-item pt-3">
           <div className="input-group input-group-sm mb-2">
             <div className="input-group-prepend">
               <span className="input-group-text" id="inputGroup-sizing-sm">Name</span>
             </div>
-            <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+            <input type="text" value={this.state.value} onChange={this.handleChange} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
           </div>
           <div className="input-group input-group-sm">
             <div className="input-group-prepend">
@@ -41,12 +59,15 @@ class Inputs extends React.Component {
             <label class="custom-control-label" for="Podcast">Podcast</label>
           </div>
         </div>
-
         <div className="flex-item mt-4 ml-3">
-          <a href="www.google.com" className="btn btn-default btn-circle">+</a>
+        <input className="btn btn-success" type="Submit" value="Add" />
+          {/* <a href="www.google.com" className="btn btn-default btn-circle">+</a> */}
         </div>
       </div>
+      <Output />
+      </form>
     );
+    
   }
 }
 
