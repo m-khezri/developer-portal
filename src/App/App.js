@@ -3,6 +3,7 @@ import connection from '../helpers/data/connection';
 import Auth from '../components/Auth/Auth';
 import './App.scss';
 import getUser from '../helpers/data/GithubRequests';
+import getCommits from '../helpers/data/GithubRequests';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
 import Chart from '../components/chart/chart';
@@ -21,6 +22,13 @@ class App extends Component {
       .then((result) => {
         console.log(result);
         this.setState({ profile: result });
+      })
+      .catch(err => console.log(err));
+
+    getCommits.getCommits('m-khezri')
+      .then((result) => {
+        console.log(result);
+        this.setState({ commits: result });
       })
       .catch(err => console.log(err));
 
@@ -67,6 +75,7 @@ class App extends Component {
           <div className="row">
             <Profile
               profile={this.state.profile}
+              commits={this.state.commits}
             />
             <div className="col-sm-9">
               <Input />
