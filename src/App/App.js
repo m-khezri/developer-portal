@@ -17,8 +17,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getUser('m-khezri')
+    getUser.getUser('m-khezri')
       .then((result) => {
+        console.log(result);
         this.setState({ profile: result });
       })
       .catch(err => console.log(err));
