@@ -6,7 +6,6 @@ import getUser from '../helpers/data/GithubRequests';
 import getCommits from '../helpers/data/GithubRequests';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import Profile from '../components/Profile/Profile';
-import Chart from '../components/chart/chart';
 import Input from '../components/Input/Input';
 import authRequest from '../helpers/data/authRequest';
 import firebase from 'firebase/app';
@@ -81,7 +80,6 @@ class App extends Component {
             </div>
           </div>
           <div className="row my-3">
-            <Chart />
           </div>
         </div>
       </div>
