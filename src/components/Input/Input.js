@@ -15,7 +15,7 @@ class Inputs extends React.Component {
   }
 
   handleSubmit() {
-    alert('Your input is  ' + this.state.value);
+    console.log('Your input is  ' + this.state.value);
   }
 
 
@@ -64,10 +64,9 @@ class Inputs extends React.Component {
             {/* <a href="www.google.com" className="btn btn-default btn-circle">+</a> */}
           </div>
         </div>
-        <Output />
+        <Output nameinput={this.state.value} />
       </form>
     );
-
   }
 }
 
