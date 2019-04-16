@@ -14,10 +14,10 @@ class Inputs extends React.Component {
     this.setState({ value: e.target.value });
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     console.log('Your input is  ' + this.state.value);
   }
-
 
   render() {
     return (
